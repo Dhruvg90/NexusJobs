@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Form</title>
+    <link rel="stylesheet" href="jobdetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Updated Font Awesome Link -->
+    <link rel="shortcut icon" href="images/Nexus bg remove logo.png" type="">
+</head>
+<body>
+    <div class="container">
+        <h2>Jobs @ Nexus Jobs</h2>
+        <form action="https://script.google.com/macros/s/AKfycbwzmEShI0Fvqj-vGw8mCvdv3esq9yxkHebDT6fWc_3grXafAetXjy6Yc2dxHDJ9vNhZ/exec" method="POST" id="jobSeekerForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="off" required>
+                <i class="fas fa-user"></i> <!-- User Icon -->
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="off" required>
+                <i class="fas fa-envelope"></i> <!-- Email Icon -->
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" autocomplete="off" required>
+                <i class="fas fa-phone"></i> <!-- Phone Icon -->
+            </div>
+            <div class="form-group">
+                <label for="currentCTC">Current CTC:</label>
+                <input type="text" id="currentCTC" name="currentCTC" autocomplete="off">
+                <i class="fas fa-rupee-sign"></i> <!-- CTC Icon -->
+            </div>
+            <div class="form-group">
+                <label for="expectedCTC">Expected CTC:</label>
+                <input type="text" id="expectedCTC" name="expectedCTC" autocomplete="off">
+                <i class="fas fa-rupee-sign"></i> <!-- CTC Icon -->
+            </div>
+            <div class="form-group">
+                <label for="noticePeriod">Notice Period:</label>
+                <input type="text" id="noticePeriod" name="noticePeriod" autocomplete="off">
+                <i class="fas fa-calendar-alt"></i> <!-- Notice Period Icon -->
+            </div>
+            <div class="form-group">
+                <label for="location">Current Location:</label>
+                <input type="text" id="location" name="location" autocomplete="off">
+                <i class="fas fa-map-marker-alt"></i> <!-- Location Icon -->
+            </div>
+            <div class="form-group">
+                <label for="designation">Current Designation:</label>
+                <input type="text" id="designation" name="designation" autocomplete="off">
+                <i class="fas fa-briefcase"></i> <!-- Designation Icon -->
+            </div>
+            <div class="form-group">
+                <label for="reason">Why should we hire you for this role?</label>
+                <textarea id="reason" name="reason" rows="4" autocomplete="off"></textarea>
+                <i class="fas fa-comment-dots"></i> <!-- Reason Icon -->
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+        <div class="spinner"></div> <!-- Spinner element -->
+    </div>
+    <script src="jobdetails.js"></script>
+</body>
+</html>

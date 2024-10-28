@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #00274D; /* Nexus logo color */
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* For positioning the menu absolutely */
+}
+
+.navbar .logo img {
+  width: 100px; /* Adjusted size for the logo */
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+.navbar .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .menu ul li {
+  margin-left: 20px;
+}
+
+.navbar .menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar .hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Container Styles */
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.container h1 {
+  text-align: center;
+  color: #00274D;
+  margin-bottom: 1.5rem;
+}
+
+.container p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.container h2 {
+  margin-top: 2rem;
+  color: #00274D;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #00274D;
+  color: #fff;
+  margin-top: 2rem;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Back to Top Button Styles */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #00274D;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar .menu {
+    position: absolute;
+    top: 90px; /* Adjust this value based on your navbar height */
+    right: 0;
+    background-color:#00274D ; /*  */
+    width: 100%;
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden; /* Hide menu by default */
+    opacity: 0;
+    z-index: 1000; /* Ensure it's on top */
+  }
+
+  .navbar .menu.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar .hamburger {
+    display: block;
+  }
+
+  .navbar .menu ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar .menu ul li {
+    margin: 10px 0;
+    margin-top: 10px;
+  }
+
+  .container {
+    padding: 1rem;
+    margin-top: 15px;
+  }
+}

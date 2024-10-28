@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  padding: 10px;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007bff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.form-group i {
+  position: absolute;
+  right: 15px;
+  top: 38px;
+  color: #ccc;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 15px 20px;
+  }
+
+  h2 {
+      font-size: 22px;
+  }
+  body{
+    height: 100%;
+  }
+
+  .btn-submit {
+      font-size: 16px;
+  }
+}
+
+  /* Spinner Styles
+  .spinner {
+    display: none; 
+    width: 60px;
+    height: 60px;
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    border-top: 8px solid #3498db;
+    border-right: 8px solid #e74c3c;
+    border-bottom: 8px solid #f39c12;
+    border-left: 8px solid #2ecc71;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+    margin: 20px auto;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}   */
+
+.spinner {
+  display: none; /* Initially hidden */
+  width: 60px;
+  height: 60px;
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-top: 8px solid #3498db;
+  border-right: 8px solid #e74c3c;
+  border-bottom: 8px solid #f39c12;
+  border-left: 8px solid #2ecc71;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  margin: 20px auto;
+  position: relative; /* Required for absolute positioning of image */
+}
+
+.spinner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  background: url('Images/Nexus\ logo.jpeg') no-repeat center center;
+  background-size: cover; /* Ensures image covers the area */
+  transform: translate(-50%, -50%);
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
